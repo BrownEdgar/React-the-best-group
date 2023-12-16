@@ -6,8 +6,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <Users title="user post N1" />
+      <h1>Levons branch</h1>
     </div>
   )
 }
