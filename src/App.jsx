@@ -7,7 +7,7 @@ import Posts from './components/Posts/posts';
 
 
 function App() {
-  const [posts, setPosts] = useState([
+  const [posts] = useState([
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1599746089331-7818f74830fd?q=80&w=2536&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

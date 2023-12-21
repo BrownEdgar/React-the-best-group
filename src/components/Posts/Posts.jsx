@@ -10,7 +10,9 @@ Posts.PropTypes = {
   body: PropTypes.string,
   image: PropTypes.string
 }
+
 export default function Posts({ posts }) {
+
   return (
     <div className='Posts'>
       {
@@ -22,10 +24,9 @@ export default function Posts({ posts }) {
                 <h2 className='Posts__title'>{car.title}</h2>
                 <h3 className='Posts__name'>{car.name}</h3>
                 <p className='Posts__desc'>{car.desc}</p>
-                <button className='Posts__body'>{car.body}</button>
-
+                <div className="divide"></div>
+                <button className='Posts__btn'>{car.body}</button>
               </div>
-
             </article>
           )
         })
