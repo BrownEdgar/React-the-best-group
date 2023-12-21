@@ -1,0 +1,18 @@
+.Posts{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 180px;
+    &__card{
+        background-color: #fff;
+        flex: 0 0 40%;
+        flex-basis: 50%;
+        width: 100px;
+        img{
+            width: 260px;
+        }
+    }
+    &__content{
+        width: 270px;
+    }
+}
