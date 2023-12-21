@@ -1,0 +1,20 @@
+$app-bg: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(35,113,33,1) 35%, rgba(0,212,255,1) 100%);
+
+.App{
+  width: 1480px;
+  margin: 0 auto;
+  background: rgb(2,0,36);
+  background: $app-bg;
+  color: cadetblue;
+  min-height: 550px;
+  padding: 1em;
+  
+
+  &__title{
+  text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: cornflowerblue;
+   
+  }
+}
