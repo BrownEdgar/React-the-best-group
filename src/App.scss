@@ -5,7 +5,9 @@
   text-align: center;
 }
 
-.App>h1 {
-  margin-bottom: 30px;
-  color: purple;
+.App {
+  >h1 {
+    font-family: Bebas Neue;
+    font-size: 60px;
+  }
 }
