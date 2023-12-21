@@ -1,25 +1,11 @@
-$app-bgc: linear-gradient(90deg, rgb(65, 70, 0) 0%, rgba(251,251,190,1) 100%, rgba(250,236,111,1) 100%);
+$app-bgc: linear-gradient(90deg, rgb(65, 70, 0) 0%, rgba(251, 251, 190, 1) 100%, rgba(250, 236, 111, 1) 100%);
 $app-tile-color: rgb(246, 246, 206);
 
-.App{
-  width: 1500px;
+.App {
+  width: 1280px;
   margin: 0 auto;
   background: lightgoldenrodyellow;
   background: $app-bgc;
   min-height: 560px;
   padding: 1em;
-  &__title{
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: $app-tile-color;
-    transition: 0.3s;
-
-    &:hover{
-      transition: 0.3s;
-      letter-spacing: 3px;
-      color: aliceblue;
-      cursor: pointer;
-    }
-  }
 }
