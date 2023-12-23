@@ -15,5 +15,20 @@
     background-color: rgb(255, 239, 120);
     padding: 12px;
     border-top: 4px solid orangered;
+    position: relative;
+  }
+  &__delBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 }

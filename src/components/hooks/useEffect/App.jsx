@@ -5,11 +5,6 @@ export default function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    console.log("useEffect run")
-  })
-
-  useEffect(() => {
-    console.log('fetch data')
     const fetchData = () => {
       fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
@@ -23,6 +18,14 @@ export default function App() {
   }, [])
 
 
+  // const deleteItem = (elem) => {
+  //   const newPosts = arr.toSpliced(post.indexOf(`${elem}`), 1)
+  //   setPosts(newPosts)
+  // }
+  const deleteItem = (elem) => {
+    const newArr = arr.toSpliced(posts.indexOf(elem), 1)
+    setArr(newArr)
+  }
 
 
   return (
@@ -35,7 +38,7 @@ export default function App() {
             return (
               <div className="Posts__item" key={post.id}>
 
-                <span>&#10006;</span>
+                <button className='Posts__delBtn' onClick={deleteItem}><span >&#10006;</span></button>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
               </div>
