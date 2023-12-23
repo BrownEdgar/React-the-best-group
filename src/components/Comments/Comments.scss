@@ -1,4 +1,4 @@
-.Post {
+.Comments {
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -7,24 +7,27 @@
     gap: 20px;
     flex-wrap: wrap;
     font-family: 'Righteous', sans-serif;
-&__content{
-    padding-top: 20px;
-}
+
+    &__content {
+        padding-top: 35px;
+
+    }
+
     &__card {
         width: 350px;
         padding: 12px;
         margin: 0 auto;
-        background: #00bf8f; 
-        background: -webkit-linear-gradient(to right, #001510, #00bf8f);  
-        background: linear-gradient(to right, #001510, #00bf8f);
-        color: aliceblue;
+        background: #0F2027;
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
         overflow: hidden;
         border-radius: 10px;
         margin-top: 20px;
         height: 250px;
         position: relative;
+        color: whitesmoke;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        h2{
+        h2 {
             text-transform: uppercase;
         }
 
@@ -32,8 +35,8 @@
             position: absolute;
             right: 10px;
             top: 10px;
-            background-color:wheat;
-            color:rgb(56, 10, 10);
+            background-color: wheat;
+            color: rgb(56, 10, 10);
             width: 27px;
             height: 27px;
             border-radius: 50%;
@@ -42,10 +45,8 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            
-
         }
+
 
     }
 }
- 

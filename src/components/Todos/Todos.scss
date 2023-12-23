@@ -1,4 +1,4 @@
-.Post {
+.Todos {
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -7,16 +7,17 @@
     gap: 20px;
     flex-wrap: wrap;
     font-family: 'Righteous', sans-serif;
-&__content{
-    padding-top: 20px;
-}
+    &__content{
+        padding-top: 20px;
+    }
+
     &__card {
         width: 350px;
         padding: 12px;
         margin: 0 auto;
-        background: #00bf8f; 
-        background: -webkit-linear-gradient(to right, #001510, #00bf8f);  
-        background: linear-gradient(to right, #001510, #00bf8f);
+        background: #c31432;
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);
+        background: linear-gradient(to right, #240b36, #c31432);
         color: aliceblue;
         overflow: hidden;
         border-radius: 10px;
@@ -28,12 +29,20 @@
             text-transform: uppercase;
         }
 
+        &.true {
+            border-left: 7px solid green;
+        }
+
+        &.false {
+            border-left: 7px solid red;
+        }
+
         span {
             position: absolute;
             right: 10px;
             top: 10px;
-            background-color:wheat;
-            color:rgb(56, 10, 10);
+            background-color: wheat;
+            color: rgb(56, 10, 10);
             width: 27px;
             height: 27px;
             border-radius: 50%;
@@ -42,10 +51,9 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            
+
 
         }
 
     }
 }
- 
