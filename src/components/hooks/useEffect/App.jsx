@@ -14,31 +14,31 @@ export default function App() {
     () => {
       console.log('the end')
     }
-
   }, [])
 
 
-  // const deleteItem = (elem) => {
-  //   const newPosts = arr.toSpliced(post.indexOf(`${elem}`), 1)
-  //   setPosts(newPosts)
-  // }
-  const deleteItem = (elem) => {
-    const newArr = arr.toSpliced(posts.indexOf(elem), 1)
-    setArr(newArr)
+  const deleteItem = (id) => {
+    const newPosts = posts.filter(post => post.id !== id)
+    setPosts(newPosts)
   }
+
 
 
   return (
     <div>
       <h1>Fetch data in react</h1>
-
       <div className="Posts">
         {
           posts.map(post => {
             return (
               <div className="Posts__item" key={post.id}>
 
-                <button className='Posts__delBtn' onClick={deleteItem}><span >&#10006;</span></button>
+                <button
+                  className='Posts__delBtn'
+                  onClick={() => deleteItem(post.id)}
+                >
+                  <span >&#10006;</span>
+                </button>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
               </div>
