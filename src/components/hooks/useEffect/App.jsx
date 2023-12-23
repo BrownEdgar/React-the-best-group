@@ -16,13 +16,10 @@ export default function App() {
     }
   }, [])
 
-
   const deleteItem = (id) => {
     const newPosts = posts.filter(post => post.id !== id)
     setPosts(newPosts)
   }
-
-
 
   return (
     <div>
@@ -33,12 +30,7 @@ export default function App() {
             return (
               <div className="Posts__item" key={post.id}>
 
-                <button
-                  className='Posts__delBtn'
-                  onClick={() => deleteItem(post.id)}
-                >
-                  <span >&#10006;</span>
-                </button>
+                <button className='Posts__delBtn' onClick={() => deleteItem(post.id)}><span >&#10006;</span></button>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
               </div>

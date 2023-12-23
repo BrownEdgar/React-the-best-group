@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/hooks/useEffect/App'
+import App from './components/axios/App'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
