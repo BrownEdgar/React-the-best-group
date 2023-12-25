@@ -1,27 +1,44 @@
 import React from "react";
 import "./Posts.css";
 import PropTypes from "prop-types"
+import { useState, useEffect } from "react";
 
-Posts.propTypes = {
-    id: PropTypes.number.isRequired,
-    image: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string
-};
+// Posts.propTypes = {
+//     id: PropTypes.number.isRequired,
+//     image: PropTypes.string,
+//     title: PropTypes.string,
+//     description: PropTypes.string
+// };
 
-export default function Posts({posts}) {
+export default function Posts() {
+
+    const [posts, setPosts] = useState([]);
+
+    const renderData = (posts) => {
+        posts.map(element => {
+            return (
+                <ul key={element.id}>
+                    <li>
+                        `${element.id}:  ${element.title}`
+                    </li>
+                </ul>
+            )
+        })
+    };
+
+    const axiosData = () => {
+        axios("https://jsonplaceholder.typicode.com/posts") 
+        .then(res => renderData(res));
+    };
+
+    useEffect(() => {
+        axiosData()
+    }, [])
+
     return (
         <div className="Posts">
             {
-                posts.map(element => {
-                    return (
-                        <div className="Posts__container" key={element.id}>
-                            <img src={element.image} className="Posts__image"/>
-                            <h3 className="Posts__title">{element.title}</h3>
-                            <p className="Posts__description">{element.description}</p>
-                        </div>
-                    )
-                })
+               axiosData()
             }
         </div>
     )
