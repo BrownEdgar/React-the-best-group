@@ -1,0 +1,11 @@
+ol {
+  width: 900px;
+  margin: 30px auto;
+  padding: 3em;
+}
+
+ol>li {
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  line-height: 1.6;
+}

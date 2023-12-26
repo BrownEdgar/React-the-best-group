@@ -2,6 +2,7 @@ import React from "react";
 import "./Posts.css";
 import PropTypes from "prop-types"
 import { useState, useEffect } from "react";
+import axios from 'axios';
 
 // Posts.propTypes = {
 //     id: PropTypes.number.isRequired,
@@ -12,34 +13,32 @@ import { useState, useEffect } from "react";
 
 export default function Posts() {
 
-    const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
 
-    const renderData = (posts) => {
-        posts.map(element => {
-            return (
-                <ul key={element.id}>
-                    <li>
-                        `${element.id}:  ${element.title}`
-                    </li>
-                </ul>
-            )
-        })
-    };
 
+
+
+  useEffect(() => {
     const axiosData = () => {
-        axios("https://jsonplaceholder.typicode.com/posts") 
-        .then(res => renderData(res));
+      axios("https://jsonplaceholder.typicode.com/posts")
+        .then(res => setPosts(res.data));
     };
+    axiosData()
+  }, [])
 
-    useEffect(() => {
-        axiosData()
-    }, [])
-
-    return (
-        <div className="Posts">
-            {
-               axiosData()
-            }
-        </div>
-    )
+  return (
+    <div className="Posts">
+      <ol>
+        {
+          posts.map(element => {
+            return (
+              <li key={element.id}>
+                {element.title}
+              </li>
+            )
+          })
+        }
+      </ol>
+    </div>
+  )
 }
