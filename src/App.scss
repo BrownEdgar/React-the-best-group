@@ -6,8 +6,22 @@
 }
 
 .App {
-  >h2 {
+  display: flex;
+  flex-direction: column;
+  &__title {
     font-family: Bebas Neue;
     font-size: 60px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 550px;
+  }
+  &__btn{
+    font-size: 50px;
   }
 }
