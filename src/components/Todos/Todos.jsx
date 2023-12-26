@@ -1,5 +1,6 @@
 import './Todos.scss'
 import { useEffect, useState } from 'react'
+import instance from '../axios/axios'
 
 export default function Todos() {
   const [todos, setTodos] = useState([])
@@ -12,13 +13,8 @@ export default function Todos() {
   }
   
   useEffect(() => {
-    const fetchData = () => {
-      fetch('https://jsonplaceholder.typicode.com/todos?_limit=12')
-        .then(res => res.json())
-        .then(data => setTodos(data))
-    }
-
-    fetchData();
+    instance('todos?_limit=6')
+    .then(res => setTodos(res.data));
 
     () => {
       console.log('the end of Todos');

@@ -1,5 +1,6 @@
 import './Post.scss'
 import { useEffect, useState } from 'react'
+import instance from '../axios/axios';
 export default function Post() {
     const [posts, setPosts] = useState([]);
 
@@ -10,13 +11,8 @@ export default function Post() {
     }
 
     useEffect(() => {
-      const fetchData = () => {
-        fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
-          .then(res => res.json())
-          .then(data => setPosts(data))
-      }
-      
-      fetchData();
+      instance('posts?_limit=6')
+      .then(res => setPosts(res.data));
       () => {
         console.log('the end');
       }

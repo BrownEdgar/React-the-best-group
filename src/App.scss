@@ -5,15 +5,28 @@
   text-align: center;
 }
 
-.App{
-h1 {
-  margin-bottom: 30px;
-  color: rgb(48, 6, 6);
-}
-&>h2{
-  font-size: 35px;
-  margin-top: 20px;
-  color: rgb(48, 6, 6);
-  font-style: italic;
-}
+.App {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-family: 'Righteous', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    
+  }
+
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 550px;
+  }
+  &__btn{
+    font-size: 50px;
+    background-color: white;
+    color: black;
+    
+  }
 }

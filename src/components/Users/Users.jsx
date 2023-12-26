@@ -1,5 +1,6 @@
 import './Users.scss'
 import { useEffect, useState } from 'react'
+import instance from '../axios/axios'
 export default function Users() {
   const [users, setUsers] = useState([])
 
@@ -10,14 +11,8 @@ export default function Users() {
   }
 
   useEffect(() => {
-    const fetchData = () => {
-      fetch('https://jsonplaceholder.typicode.com/users?_limit=9')
-        .then(res => res.json())
-        .then(data => setUsers(data))
-    }
-
-    fetchData();
-
+    instance('users?_limit=6')
+    .then(res => setUsers(res.data));
     () => {
       console.log('the end of Users');
     }
