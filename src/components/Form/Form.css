@@ -1,0 +1,35 @@
+.Form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Form_textInput {
+    width: 100%;
+}
+
+.Form_submit {
+    width: 100%;
+}
+
+.Form_delete {
+    width: 100%;
+    
+}
+
+.sort {
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.usersList {
+    list-style: none;
+    
+}
+
+.listItem {
+    border: 2px solid gray;
+    padding: 10px;
+}

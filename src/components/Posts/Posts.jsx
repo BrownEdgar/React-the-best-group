@@ -15,9 +15,6 @@ export default function Posts() {
 
   const [posts, setPosts] = useState([]);
 
-
-
-
   useEffect(() => {
     const axiosData = () => {
       axios("https://jsonplaceholder.typicode.com/posts")
