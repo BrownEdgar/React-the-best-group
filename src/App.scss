@@ -4,29 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
 .App {
   display: flex;
   flex-direction: column;
-  &__title {
-    font-family: 'Righteous', sans-serif;
-    font-size: 60px;
-    text-align: center;
-    
-  }
-
-
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 550px;
-  }
-  &__btn{
-    font-size: 50px;
-    background-color: white;
-    color: black;
-    
-  }
+  border-radius: 5px; 
+  
+  
+ 
 }

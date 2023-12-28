@@ -1,0 +1,128 @@
+.Forms {
+    h2 {
+        margin-bottom: 20px;
+        color: hsl(0, 0%, 0%);
+        font-size: 35px;
+        font-family: 'Righteous', sans-serif;
+        // text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 50px;
+        color: hsl(0, 0%, 0%);
+        font-family: 'Righteous', sans-serif;
+        text-transform: uppercase;
+    }
+    h4{
+        font-size: 35px;
+        margin-top: 25px;
+        color: rgb(2, 2, 2);
+        font-family: 'Righteous', sans-serif;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 60%;
+        margin: 0 auto;
+
+        &>input {
+            padding: 1em;
+        }
+    }
+
+    &__labels {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        &>label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+        }
+    }
+
+    &__list {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 30px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__user {
+        padding: 10px 0;
+        font-size: 22px;
+        background-color: rgba(0, 0, 0, 0.849);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+        font-family: 'Righteous', sans-serif;
+        color: rgba(245, 222, 179, 0.726);
+    }
+    &__p {
+        &>i {
+            margin-left: 10px;
+        }
+    }
+
+    &__remove {
+        cursor: pointer;
+    }
+
+    &__password {
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    &__username {
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    &__submit {
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'Righteous', sans-serif;
+
+    }
+
+    .label {
+        color: #000;
+        font-size: 35px;
+        font-family: 'Righteous', sans-serif;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        &>button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-family: 'Righteous', sans-serif;
+            color: #000;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            border: 3px solid;
+            touch-action: manipulation;
+           
+
+            
+        }
+    }
+
+}
