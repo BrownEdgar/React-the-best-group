@@ -1,0 +1,151 @@
+.Forms {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  h2{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 25px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+
+    &>input {
+      padding: 10px 15px;
+      border-radius: 15px;
+      font-size: 18px;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    &>label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+    }
+  }
+
+  &__buttons {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    .button-56 {
+      align-items: center;
+      background-color: #e0e0e0;
+      border: 2px solid #111;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #111;
+      height: 41px;
+      cursor: pointer;
+      font-family: Inter, sans-serif;
+      font-size: 18px;
+      padding: 0 10px;
+      position: relative;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+
+      &:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 41px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+      }
+
+      &:hover:after {
+        transform: translate(0, 0);
+      }
+
+      &:active {
+        background-color: #bebebe;
+        outline: 0;
+      }
+
+      &:hover {
+        outline: 0;
+      }
+    }
+  }
+
+  &__list {
+    width: 70%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__user {
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.694);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .username {
+      width: 150px;
+      text-align: left;
+    }
+
+    .password {
+      padding: 5px 10px;
+      border-radius: 15px;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      background-color: #fee6e3a2;
+
+      i {
+        cursor: pointer;
+      }
+    }
+
+    .gender {
+      width: 50px;
+
+      &-male {
+        color: royalblue;
+      }
+
+      &-female {
+        color: #F33A6A;
+      }
+    }
+
+    .bi-x-lg {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}

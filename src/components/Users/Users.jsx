@@ -12,21 +12,11 @@ export default function Users() {
     })
   }
 
-  useEffect(() => {
-    instance('users?_limit=4')
-      .then(res => setUsers(res.data))
-
-    return () => {
-      console.log('end of Users');
-    }
-  }, [])
-
-
   return users.length > 0
     ? (
       <>
         <div className='Users'>
-        {/* <h2>Our Users</h2> */}
+        <h2>Our Users</h2>
           {
             users.map(user => {
               return (
