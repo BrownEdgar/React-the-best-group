@@ -1,0 +1,25 @@
+.SelectFilm__Choose {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#select {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.SelectFilm__card {
+    width: 1280px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.SelectFilm__img {
+    width: 500px;
+}
+
+.SelectFilm__titleAndDescription {
+    padding: 15px;
+}
