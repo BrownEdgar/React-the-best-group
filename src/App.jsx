@@ -1,15 +1,19 @@
 import './App.scss'
-import Post from './components/Post/Post'
-import Todos from './components/Todos/Todos'
-import Comments from './components/Comments/Comments'
-import Users from './components/Users/Users'
 import Forms from './components/Forms/Forms'
 import { useState } from 'react'
+import Navigation from './components/Navigation/Navigation'
+import Actors from './components/Actors/Actors'
+import Footer from './components/Footer/Footer'
+import Video from './components/Video/Video'
 
 function App() {
   return(
     <div className='App'>
+      <Navigation />
       <Forms />
+      <Actors />
+      <Video />
+      <Footer />
     </div>
   )
 }

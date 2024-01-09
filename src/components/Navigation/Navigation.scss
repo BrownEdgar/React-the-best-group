@@ -1,0 +1,28 @@
+$black: #000000f6;
+$lightblack: #868484;
+$white: #EEF5FF;
+.Nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $black;
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  img{
+    width: 175px;
+  }
+  &__list{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    li{
+      cursor: pointer;
+      transition: 200ms;
+      &:hover{
+      color: $lightblack;
+      }
+    }
+  }
+}
