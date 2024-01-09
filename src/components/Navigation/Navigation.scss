@@ -1,0 +1,31 @@
+$blue1: #176B87;
+$blue2: #86B6F6;
+$blue3: #B4D4FF;
+$blue4: #EEF5FF;
+.Nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $blue1;
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  a{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  &__list{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    li{
+      cursor: pointer;
+      transition: 200ms;
+      &:hover{
+        color: $blue3;
+      }
+    }
+  }
+}

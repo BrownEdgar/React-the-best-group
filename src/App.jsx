@@ -1,16 +1,17 @@
 import './App.scss'
-import Posts from './components/Posts/Posts'
-import Todos from './components/Todos/Todos'
-import Comments from './components/Comments/Comments'
-import Users from './components/Users/Users'
 import Forms from './components/Forms/Forms'
-import { useState } from 'react'
+import Navigation from './components/Navigation/Navigation'
+import Locations from './components/Locations/Locations'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
   return (
     <div className="App">
+      <Navigation />
       <Forms />
+      <Locations />
+      <Footer />
     </div>
   )
 }
