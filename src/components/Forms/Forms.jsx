@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid'
 import { useState } from 'react'
 
 export default function Forms() {
-  const [movies, setMovies] = useState([
+  const [movies] = useState([
     {
       id: nanoid(7),
       title: 'The Lord of the Rings: The Fellowship of the Ring',
@@ -91,13 +91,18 @@ export default function Forms() {
         <label htmlFor="movies">Choose a movie:</label>
 
         <select id="movies">
-          <option value={movies[0].id}>{movies[0].title}</option>
-          <option value={movies[1].id}>{movies[1].title}</option>
-          <option value={movies[2].id}>{movies[2].title}</option>
-          <option value={movies[3].id}>{movies[3].title}</option>
-          <option value={movies[4].id}>{movies[4].title}</option>
-          <option value={movies[5].id}>{movies[5].title}</option>
-          <option value={movies[6].id}>{movies[6].title}</option>
+          {
+            Array(movies.length)
+              .fill()
+              .map((_, index) => {
+                return <option
+                  value={movies[index].id}
+                  key={movies[index].id}
+                >
+                  {movies[index].title}
+                </option>
+              })
+          }
         </select>
 
       </form>
@@ -107,11 +112,15 @@ export default function Forms() {
         </div>
         <div className="Forms__content">
           <h2>{selectedMovie.title}</h2>
-          <p className='info'> <span>{selectedMovie.date}</span> • <span>{selectedMovie.genre}</span> • <span>{selectedMovie.duration}</span></p>
+          <p className='info'>
+            <span>{selectedMovie.date}</span> •
+            <span>{selectedMovie.genre}</span> •
+            <span>{selectedMovie.duration}</span>
+          </p>
           <div className="Forms__buttons">
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-bookmark"></i>
+            <i className="bi bi-heart"></i>
+            <i className="bi bi-star"></i>
+            <i className="bi bi-bookmark"></i>
           </div>
           <h3>Overview</h3>
           <p className='overview'>{selectedMovie.overview}</p>

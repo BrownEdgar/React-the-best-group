@@ -3,7 +3,8 @@ import { nanoid } from 'nanoid'
 import { useState } from 'react'
 
 export default function Locations() {
-  const [locations, setLocations] = useState([
+  console.log('Locations')
+  const [locations] = useState([
     {
       id: nanoid(6),
       title: 'The Shire',
