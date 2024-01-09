@@ -6,7 +6,7 @@ import { useState } from "react";
 // ՏԱՐԲԵՐԱԿ  1՝  ????????????????????????????????????????
 
 export default function SelectFilm () {
-
+console.log(555)
     const [films, setFilms] = useState([
         {
             id: 1,
@@ -28,7 +28,9 @@ export default function SelectFilm () {
         }
     ]);
 
-    const valueOfSelectedOption = document.querySelector("#select").value;
+  const handleChange = (e) => {  
+
+    const valueOfSelectedOption = e.target.value
     let idOfSelectedFilm;
 
     switch (valueOfSelectedOption) {
@@ -65,17 +67,19 @@ export default function SelectFilm () {
             description: "Sin City (also known as Frank Miller's Sin City)[3] is a 2005 American neo-noir crime anthology film directed by Robert Rodriguez and Frank Miller based on Miller's comic book series of the same name"
         }]);
         break;
+      default: setFilms([])
     } 
-
-    const renderSelectedFilm = () => {films.map(film => {
+  }
+    const renderSelectedFilm = () => {
+      return films.map(film => {
         return (
-            <div className="SelectFilm__card" key={idOfSelectedFilm}>
+          <div className="SelectFilm__card" key={film.id}>
                 <div className="SelectFilm__img">
-                    {film.img}
+              <img src={film?.img}/>
                 </div>
                 <div className="SelectFilm__titleAndDescription">
-                    <h3>{film.title}</h3> <br/>
-                    <p>{film.description}</p>
+                    <h3>{film?.title}</h3> <br/>
+                    <p>{film?.description}</p>
                 </div>
             </div>
         )
@@ -85,7 +89,7 @@ export default function SelectFilm () {
         <div className="SelectFilm">
             <h2 className="SelectFilm__Choose">Choose the film</h2>
             <form>
-                <select name="selectBar" id="select">
+                <select name="selectBar" id="select" onChange={handleChange}>
                     <option value="TheGodfather">The Godfather</option>
                     <option value="TheLastDon">The Last Don</option>
                     <option value="SinCity">Sin City</option>
