@@ -1,17 +1,11 @@
 import './App.scss'
-import Forms from './components/Forms/Forms'
-import Navigation from './components/Navigation/Navigation'
-import Locations from './components/Locations/Locations'
-import Footer from './components/Footer/Footer'
+import Users from './components/Users/Users'
 
 function App() {
 
   return (
     <div className="App">
-      <Navigation />
-      <Forms />
-      <Locations />
-      <Footer />
+      <Users />
     </div>
   )
 }

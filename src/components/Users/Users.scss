@@ -1,0 +1,63 @@
+.Users {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 0;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-family: Cinzel;
+  }
+
+  &__card {
+    text-align: center;
+    padding: 20px;
+    width: 24%;
+    border-radius: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: #DCF2F1;
+    transition: 200ms;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    &.active {
+      background-color: #365486;
+      color: #DCF2F1;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      scale: 1.03;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-top: 20px;
+      background-color: rgb(219, 0, 0);
+      border: 2px solid #DCF2F1;
+      border-radius: 10px;
+      color: white;
+      font-size: 18px;
+      transition: 150ms;
+      cursor: pointer;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      &:hover {
+        background-color: rgb(168, 0, 0);
+      }
+
+      &:disabled {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border: 2px solid #365486;
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: rgb(241, 241, 241);
+        }
+      }
+    }
+  }
+}
