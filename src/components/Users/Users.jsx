@@ -11,8 +11,8 @@ const initialValues = {
 }
 
 const validationSchema = object({
-  username: string().min(3).max(15).required(),
-  password: string().min(8).matches(/(?=.*[0-9])/, 'Password must contain at least one number')
+  username: string().min(3, 'Пользователь должен содержать хотя бы 3 символов').max(15).required('Обязательное поле'),
+  password: string().min(8, 'Пароль должен содержать хотя бы 8 символов').matches(/(?=.*[0-9])/, 'Пароль должен содержать хотя бы одну цифру')
 })
 
 export default function Users() {
@@ -32,32 +32,32 @@ export default function Users() {
 
   return (
     <div className="Users">
-      <h1>Log In</h1>
+      <h1>Вход</h1>
       <Formik
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
         initialValues={initialValues}
       >
         <Form className="Users__formik">
-          <Field type="text" name="username" placeholder="Your Username" required />
+          <Field type="text" name="username" placeholder="Имя пользователя или Email" required />
           <ErrorMessage name="username" component="p" className='errorMessage' />
-          <Field type="password" name="password" placeholder="Your Password" required />
+          <Field type="password" name="password" placeholder="Пароль" required />
           <ErrorMessage name="password" component="p" className='errorMessage' />
-          <a href="#">Forgot Your Password?</a>
+          <a href="#">Забыли пароль?</a>
           <div className="Users__buttons">
-            <Field type="submit" name="submit" value="Sign In" />
-            <button>Sign Up</button>
+            <Field type="submit" name="submit" value="Войти" />
+            <button>Регистрация</button>
           </div>
         </Form>
       </Formik>
 
       <div className="Users__box">
-        <h1>User List</h1>
+        <h1>Пользователи</h1>
         {
           users.map(user => {
             return (<ul key={user.id} className="Users__list" >
-              <li><span>Username: </span> {user.username}</li>
-              <li><span>Password: </span> {user.password}</li>
+              <li><span>Пользователь: </span> {user.username}</li>
+              <li><span>Пароль: </span> {user.password}</li>
             </ul>)
           })
         }

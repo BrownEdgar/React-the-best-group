@@ -1,11 +1,20 @@
+:root{
+  background-color: rgb(37, 37, 37);
+  margin: 0 auto;
+  width: 1320px;
+}
+
 .Users {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
-
+  width: 100%;
+  padding: 50px 0;
+  
+  
   h1 {
-    font-family: 'Cinzel';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
   }
 
   &__formik {
@@ -13,16 +22,18 @@
     width: 40%;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
+    
 
     >input {
       width: 100%;
-      padding: 1em;
-      border-radius: 15px;
-      font-size: 18px;
+      padding: 15px;
+      border-radius: 6px;
+      border: 0px;
+      font-size: 15px;
     }
-
+    
     .errorMessage {
       align-self: flex-start;
       padding: 0 10px;
@@ -30,8 +41,9 @@
       font-weight: 700;
       color: red;
     }
-
+    
     a {
+      color: white;
       align-self: flex-start;
       font-weight: 700;
     }
@@ -77,7 +89,7 @@
   &__box {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    align-items: center;
     gap: 10px;
     font-family: 'Poppins', sans-serif;
   }
@@ -91,7 +103,7 @@
     font-size: 18px;
     padding: 10px 20px;
     list-style: none;
-
+    
     span {
       font-weight: 700;
     }
