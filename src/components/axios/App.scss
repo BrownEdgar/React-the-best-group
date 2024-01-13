@@ -1,0 +1,63 @@
+.App {
+  width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  &__quotes {
+    border: 2px solid saddlebrown;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    min-height: 140px;
+    h2 {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    border: 3px solid #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    top: calc(50% - 20px);
+    &-next {
+      right: -50px;
+    }
+    &-prev {
+      left: -50px;
+    }
+    &:disabled {
+      background-color: ccc;
+      cursor: no-drop;
+      border-color: red;
+    }
+  }
+  &__quoteid {
+    position: absolute;
+    width: 30px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: royalblue;
+    color: #fff;
+    text-align: center;
+    left: 20px;
+    bottom: 10px;
+  }
+  &__author {
+    background-color: orangered;
+    color: #fff;
+    min-width: 200px;
+    line-height: 30px;
+    height: 40px;
+    padding: 5px 15px;
+    border-radius: 7px;
+    position: absolute;
+    bottom: -20px;
+    right: 14px;
+  }
+}
