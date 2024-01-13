@@ -1,0 +1,25 @@
+$app-bg: linear-gradient(90deg, rgba(53, 103, 200, 1) 0%, rgba(42, 10, 10, 1) 100%);
+$app-title-color: orangered;
+
+.App {
+  width: 1480px;
+  margin: 0 auto;
+  background: rgb(53, 103, 200);
+  background: $app-bg;
+  min-height: 560px;
+  padding: 1em;
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $app-title-color;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    &:hover {
+      transition: 0.3s;
+      letter-spacing: 2px;
+      color: aliceblue;
+      cursor: pointer;
+    }
+  }
+}

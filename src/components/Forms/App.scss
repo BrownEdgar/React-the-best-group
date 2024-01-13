@@ -1,0 +1,55 @@
+.App {
+  width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  & > form {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    input {
+      margin: 12px auto;
+      padding: 1em;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+  &__list {
+    width: 100%;
+    list-style: none;
+    li {
+      padding: 12px;
+      width: 100%;
+      margin: 10px auto;
+      background-color: #ccc;
+      font-weight: 600;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      span {
+        background-color: orangered;
+        padding: 4px 8px;
+        border-radius: 8px;
+        flex-basis: 30%;
+        &.icon {
+          background-color: transparent;
+          flex-basis: 10%;
+          i {
+            font-size: 32px;
+
+            transition: 0.3s;
+            &:hover {
+              color: #ff3434;
+              scale: 1.06;
+            }
+          }
+        }
+        & > i {
+          float: right;
+          cursor: pointer;
+          font-size: 28px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
