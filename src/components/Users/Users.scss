@@ -1,123 +1,135 @@
 .Users {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 0;
-
-    h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 60px;
-        font-family: Cinzel;
-    }
-
-    &__box {
-        text-align: center;
-        padding: 20px;
-        width: 24%;
-        border-radius: 15px;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        background: #403B4A;
-        color: white;
-        font-family: 'Bebas Neue', sans-serif;
-        transition: 200ms;
-        font-size: 22px;
+    gap: 20px;
+  
+    &__arr {
+      display: flex;
+      gap: 20px;
+  
+      h2 {
+        font-size: 30px;
+        line-height: 100%;
+      }
+  
+      button {
+        font-size: 16px;
         letter-spacing: 2px;
-        perspective: 100px;
-        &.active {
-            background: #1D976C;
-            background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
-            background: linear-gradient(to right, #93F9B9, #1D976C);
-        }
-
-        &:hover {
-
-            transform: rotateX(20deg);
-        }
-
-        &:disabled {
-            background-color: rgb(255, 255, 255);
-            color: black;
-            border: 2px solid #365486;
-            cursor: not-allowed;
-
-            &:hover {
-                background-color: rgb(241, 241, 241);
-            }
-        }
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        font-family: 'Vesper Libre', serif;
+      }
     }
-
-    .button-82 {
-
-        &-pushable {
-            position: relative;
-            margin-top: 20px;
-            border: none;
-            background: transparent;
-            padding: 0;
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  
+      form {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+  
+        input {
+          font-size: 20px;
+          padding: 5px 10px;
+        }
+  
+        button {
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
             cursor: pointer;
-            outline-offset: 4px;
-            transition: filter 250ms;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
-
-            &:hover {
-                filter: brightness(110%);
-                -webkit-filter: brightness(110%);
-            }
-
-            &:disabled .button-82-front {
-                background-color: grey;
-            }
-
+            font-family: 'Vesper Libre', serif;
         }
-
-        &-shadow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            background: hsl(0deg 0% 0% / 0.25);
-            will-change: transform;
-            transform: translateY(2px);
-            transition:
-                transform 600ms cubic-bezier(.3, .7, .4, 1);
-        }
-
-        &-edge {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-            background: linear-gradient(to left,
-                    hsl(340deg 100% 16%) 0%,
-                    hsl(340deg 100% 32%) 8%,
-                    hsl(340deg 100% 32%) 92%,
-                    hsl(340deg 100% 16%) 100%);
-
-        }
-
-        &-front {
-            display: block;
-            position: relative;
-            padding: 12px 27px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            color: white;
-            background: hsl(345deg 100% 47%);
-            will-change: transform;
-            transform: translateY(-4px);
-            transition:
-                transform 600ms cubic-bezier(.3, .7, .4, 1);
-        }
+      }
     }
-
-
-
-}
+  
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      li {
+        list-style: none;
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 25px;
+        border-radius: 15px;
+        border: 3px solid rgb(15, 15, 15);
+        text-align: center;
+      }
+    }
+  
+    &__posts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 60%;
+    }
+  
+    &__buttons {
+      display: flex;
+      gap: 15px;
+  
+      button {
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        font-family: 'Vesper Libre', serif;
+      }
+    }
+  
+    &__post {
+      border: 3px solid rgb(12, 12, 12);
+      width: 100%;
+      padding: 25px;
+      position: relative;
+      border-radius: 10px;
+      font-family: 'Vesper Libre', serif;
+      margin-top: 15px;
+  
+      span {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: rgb(12, 11, 11);
+      }
+    }
+  }

@@ -1,52 +1,80 @@
-import { useEffect, useState } from "react";
-import './Users.scss';
-import instance from "../axios/axios";
+import './Users.scss'
+import { useReducer } from 'react'
+import reducer, { initialState } from './reducer';
+import instance from '../axios/axios'
+
 export default function Users() {
-    const [users, setUsers] = useState([]);
-    useEffect(() => {
-        instance('users?_limit=6')
-            .then(res => setUsers(res.data))
-        return () => {
-            console.log('haylur');
-        }
-    }, [])
+  const [state, dispatch] = useReducer(reducer, initialState)
 
-    const deleteUser = (id) => {
-        setUsers(prevUsers => {
-            return prevUsers.filter(user => user.id !== id)
-        })
-    }
-    const [active, setActive] = useState(null);
-    const handleClick = (id) => {
-        id === active ? setActive(0) : setActive(id);
-    }
+  const getPosts = () => {
+    instance('posts?_limit=10')
+      .then(res => dispatch({ type: 'get-posts', payload: res.data }))
+  }
 
-    return (
-        <div className="Users">
-            {
-                users.map(user => {
-                    return (
-                        <div onClick={() => handleClick(user.id)}
-                            className={`Users__box ${user.id === active ? 'active' : ''}`}
-                            key={user.id}>
-                            <h2>{user.username}</h2>
-                            <p>{user.phone}</p>
-                            <p>{user.website}</p>
-                           
-                            <button 
-                            disabled={user.id !== active}
-                            onClick={() => deleteUser(user.id)}
-                            class="button-82-pushable" role="button">
-                                <span class="button-82-shadow"></span>
-                                <span class="button-82-edge"></span>
-                                <span class="button-82-front text">
-                                    No Please <i className="bi bi-x-lg"></i>
-                                </span>
-                            </button>
-                        </div>
-                    )
-                })
-            }
+  const addDev = (e) => {
+    e.preventDefault();
+    const { username } = e.target;
+    dispatch({ type: 'add-developer', payload: username.value })
+  }
+
+  const sortArr = () => {
+    dispatch({ type: 'sort-arr' })
+  }
+
+  const deletePost = (id) => {
+    dispatch({ type: 'delete-post', payload: id })
+  }
+
+  const changeID = () => {
+    dispatch({ type: 'change-id' })
+  }
+
+  return (
+    <div className="Users">
+
+      <div className="Users__arr">
+        <h2>Arr: {JSON.stringify(state.arr, null, 1)}</h2>
+        <button onClick={sortArr}>Sort Array</button>
+      </div>
+
+      <div className="Users__form">
+        <h1>Add Developers</h1>
+        <form onSubmit={addDev}>
+          <input type="text" name="username" id='username' placeholder='Enter Your Name' required />
+          <button>Add Developer</button>
+        </form>
+        <ul className='Users__list'>
+          {
+            state.developers.length > 0
+              ? state.developers.map((dev, index) => {
+                return <li key={index}> {dev} </li>
+              })
+              : <h2>No Developers Yet</h2>
+          }
+        </ul>
+      </div>
+
+      <div className="Users__posts">
+        <h1>Posts</h1>
+        <div className="Users__buttons">
+          <button onClick={getPosts}>Get Posts</button>
+          <button onClick={changeID}>Change ID</button>
         </div>
-    )
+        {
+          state.posts.length > 0
+            ? state.posts.map(post => {
+              return <div className="Users__post" key={post.id}>
+                <h3>{post.id} : {post.title}</h3>
+                <p>{post.title}</p>
+                <span onClick={() => deletePost(post.id)}>&#10006;</span>
+              </div>
+            })
+            : <h2>No Posts Yet</h2>
+        }
+      </div>
+    </div>
+  )
+
+
+
 }
