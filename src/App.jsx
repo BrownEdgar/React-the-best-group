@@ -4,7 +4,7 @@ import './App.scss'
 
 
 function App() {
-  const [posts, setPosts] = useState([
+  const [posts] = useState([
     {
       id: 1,
       title: 'Pandas',
