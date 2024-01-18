@@ -1,23 +1,30 @@
-
+import { useEffect, useState } from 'react';
 
 export default function useRandom(count, type, font) {
-    const arr = [];
-    if (typeof(type) === "number") {
-        for (let i = 0; i < count; i++) {
-            arr[i] = Math.round(Math.random()*1000);
-        }
-        return arr;
-    } else if (typeof(type) === "string" && font === "lower") {
-        const characters = "abcdefghijklmnopqrstuvwxyz";
-        for(let i = 0; i < count; i++) {
-            arr[i] = characters.charAt(Math.floor(Math.random()*characters.length));
-        }
-        return arr;
-    } else if (typeof(type) === "string" && font === "upper") {
-        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        for(let i = 0; i < count; i++) {
-            arr[i] = characters.charAt(Math.floor(Math.random()*characters.length));
-        }
-        return arr;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getRandomLetters = (quantity) => {
+      const arr = [];
+      for (let i = 0; i < quantity; i++) {
+        const random = Math.round(Math.random() * (122 - 97) + 97);
+        const letter = String.fromCharCode(random);
+        arr.push(letter)
+      }
+      return font === 'lower' ? arr : arr.map(elem => elem.toUpperCase())
     }
+
+    const getRandomNumbers = (quantity) => {
+      return Array(quantity).fill().map(() => Math.floor(Math.random() * 1001))
+    }
+
+    if (type === 'string') {
+      setData(getRandomLetters(count))
+    } else if (type === 'number') {
+      setData(getRandomNumbers(count))
+    }
+  }, [count, type, font])
+
+
+  return data
 }
