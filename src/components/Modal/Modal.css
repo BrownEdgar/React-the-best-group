@@ -1,0 +1,38 @@
+.Modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal__Content {
+    width: 400px;
+    height: 180px;
+    background-color: white;
+    position: relative;
+    z-index: 15;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.Modal__Content > h3 {
+    text-align: center;
+}
+
+.Modal__Content > p {
+    text-align: justify;
+}
+
+.Modal__Content > span {
+    cursor: pointer;
+    color: red;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    float: right;
+}

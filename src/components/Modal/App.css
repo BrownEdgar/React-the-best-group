@@ -1,0 +1,10 @@
+.OpenModalButton {
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.OpenModalButton:hover {
+    background-color: royalblue;
+}

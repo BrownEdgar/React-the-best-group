@@ -6,11 +6,13 @@ import People from './components/People/People.jsx';
 import FormikTest from './components/Formik/Formik.jsx';
 import CustomHook from "./components/CustomHook/CustomHook.jsx"
 
+
 function App() {
 
   return (
     <div className='App'>
-      <CustomHook/>
+
+      {/* <CustomHook/> */}
       {/* <FormikTest /> */}
       {/* <People/> */}
       {/* <SelectFilm /> */}
