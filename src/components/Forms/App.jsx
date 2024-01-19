@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { nanoid } from 'nanoid'
 
 import './App.scss'
+import Modal from '../ModalEx/Modal/Modal'
 
 export default function App() {
 
@@ -54,6 +55,7 @@ export default function App() {
 
   return (
     <div className='App'>
+
       <h1>Works with form in react</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder='username' required name='username' />

@@ -1,13 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-}
-
-
-* {
-  border: 1px solid #000;
-  margin: 10px;
 }
 
 body {
@@ -17,9 +17,6 @@ body {
   margin: 0 auto;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 a {
   text-decoration: none;
