@@ -1,0 +1,25 @@
+.Room {
+    margin: 0 auto;
+    height: 600px;
+    width: 70%;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+ 
+    i {
+        font-size: 50px;
+        color: wheat;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 18px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+}

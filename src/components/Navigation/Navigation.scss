@@ -1,28 +1,30 @@
-$black: #000000f6;
-$lightblack: #868484;
-$white: #EEF5FF;
-.Nav{
+@font-face {
+  font-family: fontchik;
+  src: url(../fontchik.ttf);
+}
+.Nav {
+  margin: 0 auto;
+  height: 200px;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  background-color: $black;
-  padding: 15px 20px;
+  // background-color: $black;
   font-size: 22px;
   font-weight: 700;
   color: white;
-  img{
-    width: 175px;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
-  &__list{
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    li{
-      cursor: pointer;
-      transition: 200ms;
-      &:hover{
-      color: $lightblack;
-      }
-    }
+
+  h1 {
+    position: absolute;
+    font-family: fontchik;
+    font-size: 150px;
+    letter-spacing: 2px;
   }
 }

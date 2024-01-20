@@ -1,17 +1,23 @@
+import { useState } from 'react'
 import './App.scss'
-import Users from './components/Users/Users'
-import useRandom from './components/useRandom/useRandom'
-
+import Modal from './components/Modal/Modal'
+import Navigation from './components/Navigation/Navigation'
+import Horror from './components/Horror/Horror';
+import Audio from './components/Audio/Audio';
+import Video from './components/Video/Video';
+import Room from './components/Room/Room';
 function App() {
-  const arr = useRandom({
-    count: 7,
-    type: "string",
-    letter: "upper"
-  })
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <div className='App'>
-      <p>{JSON.stringify(arr)}</p>
-
+      <Navigation />
+      <Audio />
+      <Horror toggleModal={toggleModal} isOpen={isOpen} />
+      <Room />
+      <Video />
     </div>
   )
 }
