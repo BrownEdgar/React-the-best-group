@@ -1,0 +1,41 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  
+}
+.Users{
+  width: 1480px;
+  margin: 2em auto;
+  
+  h1{
+    border-bottom: 1px solid black;
+    
+  }
+  &___name{
+    padding: 15px;
+    &:hover{
+      background-color: rgb(114, 152, 228);
+      border: 1px solid;
+      border-radius: 8px;
+      button{
+        background-color: red;
+        color: aliceblue;
+      }
+    }
+   p{
+    margin: 10px 0;
+   }
+  }
+}
+button{
+  padding: 8px;
+  border-radius: 6px;
+  background-color: darkgray;
+  margin-top: 18px;
+  cursor: pointer;
+  
+  
+}
+.UserBg{
+  background-color: aquamarine;
+}

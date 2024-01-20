@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  width: 96%;
+  margin: 25px auto;
+  &__posts{
+    border: 2px solid red;
+  }
+  
+}

@@ -1,0 +1,12 @@
+.App{
+  width: 1480px;
+  padding: 25px;
+  margin: 0 auto;
+  .delete{
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 9px;
+    background-color: cadetblue;
+    cursor: pointer;
+  }
+}
