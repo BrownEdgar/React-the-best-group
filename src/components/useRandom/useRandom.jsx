@@ -1,23 +1,3 @@
-// import { useState } from "react"
-
-// export default function useRandom({ count, type, letter }) {
-//   const [data, setData] = useState([])
-
-//   if (type === 'number') {
-//     for (let i = 0; i < count; i++) {
-//       setData(...data, Math.round(Math.random() * 1000))
-//     }
-//   } else if (type === 'string') {
-//     for (let i = 0; i < count; i++) {
-//       letter === 'upper'
-// ? setData(...data, Math.random().toString(36).substring(2, 3).toUpperCase())
-//       : setData(...data, Math.random().toString(36).substring(2, 3).toLowerCase())
-//     }
-//   }
-//   return data;
-// }
-
-
 import { useState } from 'react';
 
 export default function useRandom({ count, type, letter }) {

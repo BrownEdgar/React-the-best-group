@@ -1,17 +1,23 @@
+import { useState } from 'react'
 import './App.scss'
-import useRandom from './components/useRandom/useRandom'
-
+import Navigation from './components/Navigation/Navigation';
+import Characters from './components/Characters/Characters';
+import Slider from './components/Slider/Slider';
 function App() {
-  const arr1 = useRandom({
-    count: 6,
-    type: 'string',
-    letter: 'lower'
-  })
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
-    <div className="App">
-      <h1>{JSON.stringify(arr1,null,1)}</h1>
-    </div>
+    <>
+      <Navigation />
+      <Slider />
+      <div className="App">
+        <Characters toggleModal={toggleModal} isOpen={isOpen} />
+      </div>
+    </>
   )
 }
 

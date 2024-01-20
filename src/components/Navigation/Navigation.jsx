@@ -3,15 +3,7 @@ import './Navigation.scss'
 export default function Navigation() {
   return (
     <nav className='Nav'>
-      <a href="#">MEC</a>
-      <ul className='Nav__list'>
-        <li>HOME</li>
-        <li>MOVIES</li>
-        <li>TV-SERIES</li>
-        <li>CAST</li>
-        <li>ABOUT US</li>
-        <li>CONTACT</li>
-      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png" />
     </nav>
   )
 }
