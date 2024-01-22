@@ -1,90 +1,46 @@
-$blue1: #176B87;
-$blue2: #86B6F6;
-$blue3: #B4D4FF;
-$blue4: #EEF5FF;
-
 .Forms {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 30px;
   margin-top: 20px;
   padding: 0 30px;
+  width: 100%;
 
   &__form {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    align-items: center;
-    background-color: $blue1;
-    color: white;
-    padding: 10px;
     width: 50%;
-    margin: 0 auto;
-    font-size: 18px;
-    border-radius: 20px;
-    font-weight: 700;
 
-    select {
-      padding: 5px 10px;
+    input {
+      padding: 5px;
+      font-size: 20px;
       border-radius: 10px;
     }
-  }
 
-  &__movie {
-    display: flex;
-    gap: 20px;
-
-    h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 30px;
-      font-weight: 700;
+    select {
+      font-size: 20px;
+      border-radius: 10px;
+      padding: 5px;
     }
   }
 
-  &__content {
-    border: 3px solid $blue1;
-    border-radius: 15px;
-    padding: 30px;
+  &__products {
+    width: 50%;
+    height: 340px;
     display: flex;
     flex-direction: column;
-
-    h3 {
-      font-size: 22px;
-    }
-
-    .overview {
-      width: 80%;
-      font-size: 18px;
-    }
-
-    h4 {
-      margin-top: 20px;
-    }
+    padding: 20px 30px;
+    gap: 15px;
+    overflow: auto;
+    border: 2px solid black;
+    border-radius: 20px 0 0 20px;
   }
 
-  &__buttons {
-    font-size: 35px;
-    display: flex;
-    gap: 30px;
-
-    i {
-      cursor: pointer;
-      transition: 200ms;
-
-      &:hover {
-        color: $blue2;
-      }
-    }
+  &__box {
+    min-height: 145px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
   }
-
-  &__img {
-    img {
-      width: 300px;
-      transition: 200ms;
-      height: 100%;
-      border-radius: 15px;
-      object-fit: cover;
-    }
-  }
-
 }
