@@ -1,0 +1,64 @@
+.Forms {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+
+    &__Form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 50%;
+        height: 400px;
+
+        input {
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        select {
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+
+    &__Products {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 15px;
+        height: 400px;
+        overflow: scroll;
+        padding: 5px 20px;
+    }
+
+    &__content {
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        min-height: 180px;
+        padding: 20px;
+        font-family: 'Vesper Libre', serif;
+    }
+
+    .submit {
+        margin-bottom: 20px;
+        font-family: 'Vesper Libre', serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        font-family: 'Vesper Libre', serif;
+    }
+}
