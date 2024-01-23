@@ -29,10 +29,17 @@ export default function Forms() {
     },
     {
       id: nanoid(6),
-      title: 'Milk',
-      price: 1200,
-      category: 'Dairy',
-      expiration: '2024-01-28'
+      title: 'Bread',
+      price: 180,
+      category: 'Baking',
+      expiration: '2024-01-23'
+    },
+    {
+      id: nanoid(6),
+      title: 'Chocolate',
+      price: 600,
+      category: 'Candies',
+      expiration: '2024-02-01'
     }
   ]);
 
@@ -65,7 +72,8 @@ export default function Forms() {
           <Field type="number" name="price" placeholder="Price" />
           <Field as="select" name="category">
             <option value="dairy">Dairy</option>
-            <option value="bakery">Bakery</option>
+            <option value="bakery">Candies</option>
+            <option value="drinks">Baking</option>
             <option value="drinks">Drinks</option>
           </Field>
           <Field type="date" name="expiration" />
