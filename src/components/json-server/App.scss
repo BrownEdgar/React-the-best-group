@@ -1,0 +1,41 @@
+.Posts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 100px;
+  gap: 20px;
+  & > div {
+    background-color: #1d1d1d;
+    position: relative;
+    padding: 1em;
+    border-radius: 10px;
+    color: beige;
+    .delete {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+      color: #fff;
+      border: 0;
+      background-color: #dd1313;
+    }
+  }
+}
+form {
+  width: 500px;
+  margin: 20px auto;
+  input,
+  select {
+    font-size: 20px;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
