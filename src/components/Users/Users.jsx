@@ -1,58 +1,69 @@
 import './Users.scss'
-import { useEffect, useState } from 'react'
-import instance from '../axios/axios';
+import { useState } from 'react'
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { object, string } from 'yup'
+import { nanoid } from 'nanoid'
+
+
+const initialValues = {
+  username: '',
+  password: '',
+}
+
+const validationSchema = object({
+  username: string().min(3).max(15).required(),
+  password: string().min(8).matches(/(?=.*[0-9])/, 'Password must contain at least one number')
+})
 
 export default function Users() {
 
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
-  const deleteUser = (id) => {
-    setUsers(prevUsers => {
-      return prevUsers.filter(user => user.id !== id)
-    })
+  const handleSubmit = (values, { resetForm }) => {
+    const user = {
+      id: nanoid(6),
+      ...values
+    }
+
+    setUsers([...users, user])
+
+    resetForm();
   }
 
-  useEffect(() => {
-    instance('users?_limit=4')
-      .then(res => setUsers(res.data))
+  return (
+    <div className="Users">
+      <h1>Log In</h1>
+      <Formik
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+        initialValues={initialValues}
+      >
+        <Form className="Users__formik">
+          <Field type="text" name="username" placeholder="Your Username" required />
+          <ErrorMessage name="username" component="p" className='errorMessage' />
+          <Field type="password" name="password" placeholder="Your Password" required />
+          <ErrorMessage name="password" component="p" className='errorMessage' />
+          <a href="#">Forgot Your Password?</a>
+          <div className="Users__buttons">
+            <Field type="submit" name="submit" value="Sign In" />
+            <button>Sign Up</button>
+          </div>
+        </Form>
+      </Formik>
 
-    return () => {
-      console.log('end of Users');
-    }
-  }, [])
-
-
-  return users.length > 0
-    ? (
-      <>
-        <div className='Users'>
-        {/* <h2>Our Users</h2> */}
-          {
-            users.map(user => {
-              return (
-                <div className="Users__card" key={user.id}>
-                  <span onClick={() => deleteUser(user.id)}>&#10006;</span>
-                  <div className="Users__content">
-                    <h3>{user.name}</h3>
-                    <p>Username: {user.username}</p>
-                    <p>Email: {user.email}</p>
-                    <p>Website: {user.website}</p>
-                    <p>Company: {user.company.name}</p>
-
-                  </div>
-                </div>
-              )
-            })
-          }
-        </div>
-      </>
-
-    )
-    : (
-      <div className="Users__message">
-        <h2>No Users Available At The Moment</h2>
+      <div className="Users__box">
+        <h1>User List</h1>
+        {
+          users.map(user => {
+            return (<ul key={user.id} className="Users__list" >
+              <li><span>Username: </span> {user.username}</li>
+              <li><span>Password: </span> {user.password}</li>
+            </ul>)
+          })
+        }
       </div>
-    )
+
+    </div>
+  )
 
 }
-
