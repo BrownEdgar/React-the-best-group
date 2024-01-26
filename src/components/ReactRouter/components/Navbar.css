@@ -1,0 +1,29 @@
+nav {
+    width: 1000px;
+    height: 50px;
+    background-color: royalblue;
+    color: black;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    line-height: 50px;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: brown;
+}
+
+.active {
+    color: white;
+}
