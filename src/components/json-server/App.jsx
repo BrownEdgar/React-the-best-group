@@ -1,7 +1,5 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-
-
 import './App.scss'
 import { nanoid } from 'nanoid';
 import moment from 'moment/moment';
@@ -54,7 +52,8 @@ export default function App() {
                 <h2>{elem.title}</h2>
                 <p>
                   <em>
-                    {moment(elem.createAt).format("MM DD YY")}
+                    {moment("2024/01/29").fromNow()}
+
                   </em>
                 </p>
               </div>
