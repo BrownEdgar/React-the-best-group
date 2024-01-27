@@ -18,6 +18,13 @@ header{
       li {
         font-weight: 500;
         font-size: 20px;
+        a {
+          &.active{
+            color: orange;
+            padding-bottom: 4px;
+            border-bottom: 2px solid orange;
+          }
+        }
       }
     }
   }
