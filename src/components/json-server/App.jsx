@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 import './App.scss'
 import { nanoid } from 'nanoid';
-import moment from 'moment/moment';
 
 export default function App() {
   const [posts, setPosts] = useState([]);
