@@ -1,0 +1,71 @@
+.Main {
+  // background: #0f0c29;
+  // background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  // background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-image: url('https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: top;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: 'Maximum Impact Regular';
+
+  width: 1280px;
+  margin: 0 auto;
+
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-family: 'Azonix Regular';
+      color: gold;
+    }
+
+    img {
+      width: 50px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+
+    .active {
+      color: gold;
+      border-radius: 5px;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: gold;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: 200ms;
+      }
+    }
+
+    &>a {
+      transition: 300ms;
+      letter-spacing: 2px;
+
+      &:hover {
+        color: gold;
+      }
+    }
+  }
+}

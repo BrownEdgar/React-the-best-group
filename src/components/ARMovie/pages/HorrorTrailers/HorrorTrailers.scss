@@ -1,0 +1,43 @@
+.HorrorTrailers {
+  width: 1280px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__select {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 40px;
+      font-family: 'Maximum Impact Regular';
+      letter-spacing: 1.5px;
+      color: #93291E;
+    }
+  }
+
+  select {
+    font-size: 20px;
+    padding: 10px 20px;
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    border: 2px solid #93291E;
+    color: white;
+    border-radius: 12px;
+
+    option {
+      background-color: #93291E;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

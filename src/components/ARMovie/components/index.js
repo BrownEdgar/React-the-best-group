@@ -1,0 +1,8 @@
+export { default as NavBar } from './NavBar/NavBar'
+export { default as Home } from './Home/Home'
+export { default as Comics } from './Comics/Comics'
+export { default as Horror } from './Horror/Horror'
+export { default as Armenian } from './Armenian/Armenian'
+export { default as Contact } from './Contact/Contact'
+export { default as ErrorPage } from './ErrorPage/ErrorPage'
+export { default as Footer } from './Footer/Footer'

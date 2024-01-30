@@ -9,10 +9,34 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  
+
+@font-face {
+  font-family: 'Azonix Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Azonix Regular'), url('./Azonix.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Maximum Impact Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Maximum Impact Regular'), url('Maximum Impact.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'horrorfont';
+  src: url('./horrorfont.ttf');
+}
+
+body {}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
 }

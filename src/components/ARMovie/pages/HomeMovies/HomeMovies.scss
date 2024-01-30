@@ -1,0 +1,81 @@
+.HomeMovies {
+  margin-top: 30px;
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 35px;
+
+  h1 {
+    font-family: 'Maximum Impact Regular';
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
+    color: #302b63;
+    font-size: 50px;
+  }
+
+  &__movies {
+    display: grid;
+    padding: 0 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  &__card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    overflow: hidden;
+
+    &:hover .buttons {
+      transform: rotateX(0);
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 520px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+    gap: 30px;
+    border-radius: 10px 10px 0 0;
+
+    i {
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
