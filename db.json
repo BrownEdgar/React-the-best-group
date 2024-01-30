@@ -1,10 +1,4 @@
 {
-  "posts": [
-    {
-      "id": "XE3G",
-      "title": "post N 1",
-      "createAt": "2024-01-23T22:07:27+04:00"
-    }
-  ],
+  "posts": [],
   "users": []
 }
