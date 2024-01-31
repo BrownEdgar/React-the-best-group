@@ -1,0 +1,29 @@
+.AddUser {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.AddUser__textInput {
+    border-radius: 7px;
+}
+
+.AddUser__SaveUsernameButton {
+    background-color: royalblue;
+    color: black;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.AddUser__SaveUsernameButton:hover {
+    background-color: green;
+}

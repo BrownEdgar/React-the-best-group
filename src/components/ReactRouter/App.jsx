@@ -1,21 +1,24 @@
 import React from 'react'
-import Navbar from './components/Navbar'
 import "./App.css"
-import Home from './pages/home/Home'
-import AddUser from './pages/addUser/AddUser'
-import Users from './pages/users/Users'
-import { Route, Routes } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import ROUTES from './routes'
+import Layouts from './components/Layouts'
+import { Home, AddUser, Users } from './pages'
 
 export default function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path={ROUTES.HOME} element={<Layouts/>}>
+        <Route index element={<Home/>}/>
+        <Route path={ROUTES.ADD_USER} element={<AddUser/>}/>
+        <Route path={ROUTES.USERS} element={<Users/>}/>
+      </Route>
+    )
+  )
   return (
     <div className='App'>
-        <Navbar/>
-        <Routes>
-            <Route path={ROUTES.HOME} element={<Home/>}/>
-            <Route path={ROUTES.ADD_USER} element={<AddUser/>}/>
-            <Route path={ROUTES.USERS} element={<Users/>}/>
-        </Routes>
+        <RouterProvider router={router}/>
     </div>
   )
 }
+
