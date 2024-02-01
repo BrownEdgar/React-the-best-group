@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Posts from './components/Posts/Posts'
 import './App.scss'
+import Posts from '@/Posts/Posts';
 
 
 function App() {

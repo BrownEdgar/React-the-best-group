@@ -6,8 +6,6 @@ import Layouts from './components/Layouts'
 
 
 export default function App() {
-
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path={ROUTES.HOME} element={<Layouts />}>
