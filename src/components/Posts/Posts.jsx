@@ -1,47 +1,24 @@
-import './Posts.scss'
+import { useDispatch } from 'react-redux'
+import s from './Posts.module.css'
+import { deletePosts } from '../../features/posts/postsSlice'
 
-import PropTypes from 'prop-types' // imbr
+export default function Posts({ posts }) {
+  const dispatch = useDispatch()
 
-Posts.propTypes = {
+  const handleDelete = (id) => {
+    dispatch(deletePosts(id))
+  }
 
-  id: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string
-  ]),
-  posts: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      desc: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-    })
-  ),
-  title: PropTypes.string
-}
-
-Posts.defaultProps = {
-  posts: [],
-  title: 'default title'
-}
-
-
-
-export default function Posts({ posts, title }) {
-  console.log(title)
   return (
-    <div className='Posts'>
+    <div className={s.Posts}>
       {
-        posts.map(animal => {
+        posts.map(post => {
           return (
-            <article className='Posts__cart' key={animal.id}>
-              <h2 className='Posts__title'>{animal.title.toUpperCase()}</h2>
-              <div className='Posts__content'>
-                <img src={animal.image} />
-                <p className='Posts__desc'>
-                  {animal.desc}
-                </p>
-              </div>
-            </article>
+            <div className={s.Posts__item} key={post.id}>
+              <span onClick={() => handleDelete(post.id)}>&#10006;</span>
+              <h2>{post.title}</h2>
+              <p>{post.body}</p>
+            </div>
           )
         })
       }
