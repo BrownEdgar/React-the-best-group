@@ -1,6 +1,8 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-createAsyncThunk
+export const myFloatAction = createAction(
+  'myFloatAction'
+)
 
 const counterSlice = createSlice({
   name: 'counter',
@@ -13,7 +15,12 @@ const counterSlice = createSlice({
       return state - action.payload;
     }
   },
+  extraReducers: (builder) => {
+    builder.addCase(myFloatAction, (state, action) => {
+      return state + 1
+    })
+  }
 })
 
-export const {addCount, minusCount} = counterSlice.actions;
+export const { addCount, minusCount } = counterSlice.actions;
 export default counterSlice.reducer;

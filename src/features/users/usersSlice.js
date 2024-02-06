@@ -1,19 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { myFloatAction } from '../counter/counterSlice';
 
 const usersSlice = createSlice({
   name: 'users',
-  initialState: [],
+  initialState: [{
+    id: "superAdmin123",
+    name: 'Samo',
+    createdAt: new Date().getTime()
+  }],
   reducers: {
     addUser(state, action) {
-      const user = {
-        id: action.payload.id,
-        name: action.payload.name
-      }
-      state.push(user);
+      state.push(action.payload);
     },
     deleteUser(state, action) {
       return state.filter(user => user.id !== action.payload)
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(myFloatAction, (state, action) => {
+      return []
+    })
   }
 })
 

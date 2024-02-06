@@ -1,5 +1,5 @@
 import './Users.scss'
-import { addUser, deleteUser,  } from '../../features/users/usersSlice';
+import { addUser, deleteUser, } from '../../features/users/usersSlice';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -11,10 +11,7 @@ export default function Users() {
   const addUserForm = (e) => {
     e.preventDefault();
     const { name } = e.target
-    dispatch(addUser({
-      id: nanoid(6),
-      name: name.value
-    }))
+    dispatch(addUser({ name: name.value }))
     e.target.reset();
   }
 
