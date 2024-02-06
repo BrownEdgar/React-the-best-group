@@ -4,6 +4,7 @@ import ROUTES from './components/ARMovie/pages/routes'
 import { NavBar, Comics, Home, Contact, Footer, ErrorPage, Horror, Armenian } from './components/ARMovie/components/'
 import { useState, createContext } from 'react'
 import ActorPage from './components/ARMovie/components/ActorPage/ActorPage'
+import Movies from './components/Movies/Movies'
 
 export const MyContext = createContext('default value')
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar />
       <Routes>
         <Route path={ROUTES.HOME} element={
           <MyContext.Provider value={{ isOpen: isOpen, toggleModal: toggleModal }}>
@@ -34,7 +35,9 @@ function App() {
         <Route path={ROUTES.CONTACT} element={<Contact />} />
         <Route path={ROUTES.ERROR_PAGE} element={<ErrorPage />} />
       </Routes>
-      <Footer />
+      <Footer /> */}
+
+      <Movies />
     </div>
   )
 }

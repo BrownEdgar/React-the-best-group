@@ -14,19 +14,19 @@
   font-family: 'Azonix Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Azonix Regular'), url('./Azonix.woff') format('woff');
+  src: local('Azonix Regular'), url('./assets/Azonix.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Maximum Impact Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Maximum Impact Regular'), url('Maximum Impact.woff') format('woff');
+  src: local('Maximum Impact Regular'), url('./assets/Maximum\ Impact.woff') format('woff');
 }
 
 @font-face {
   font-family: 'horrorfont';
-  src: url('./horrorfont.ttf');
+  src: url('./assets/horrorfont.ttf');
 }
 
 body {}
