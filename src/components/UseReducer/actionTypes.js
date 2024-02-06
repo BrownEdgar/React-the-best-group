@@ -1,5 +1,0 @@
-export const GET_POSTS = 'GET_POSTS'
-export const ADD_DEVELOPER = 'ADD_DEVELOPER'
-export const SORT_ARR = 'SORT_ARR'
-export const DELETE_POST = 'DELETE_POST'
-export const CHANGE_ID = 'CHANGE_ID'
