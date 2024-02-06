@@ -52,7 +52,6 @@ export default function Horror({ toggleModal, isOpen }) {
         toggleModal();
     }
     return (
-
         <>
             {isOpen
                 ? <Modal toggleModal={toggleModal} isOpen={isOpen}>

@@ -1,78 +1,76 @@
-import { useState } from 'react'
+import React from 'react'
 import './Actors.scss'
-export default function Actors(){
-    const [actors, setActors] = useState([
+import { useState } from 'react'
+import { nanoid } from 'nanoid'
+export default function Actors() {
+    const [armActors] = useState([
         {
-            id:1,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/lLFs80wuxxHd1cmFz470hRDZBHj.jpg',
-            name:'Daniel Radcliffe',
-            gender:'male',
-            birthday:'1989-07-23 (34 years old)'            
+            id: nanoid(5),
+            img: 'https://a1plus.am/static/articles/34/58/62/l-y1Rq5VJsyX.jpg',
+            name: 'Mkrtich Arzumanyan',
+            age: 47,
+            movies: 'Qayl Dziov,Gorcakal-044,AlaBalaNica,Hyusis-Hrav',
         },
         {
-            id:2,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tvPPRGzAzdQFhlKzLbMO1EpuTJI.jpg',
-            name:'Emma Watson',
-            gender:'Female',
-            birthday:'1990-04-15 (33 years old)'            
+            id: nanoid(5),
+            img: 'https://www.1tv.am/images/video/5/21394/04.jpeg',
+            name: 'Hayk Marutyan',
+            age: 47,
+            movies: 'AlaBalaNica,Siro Gorcakic,Super Mama,Mer Bak',
         },
         {
-            id:3,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/q2KZZ0ltTEl7Sf8volNFV1JDEP4.jpg',
-            name:'Rupert Grint',
-            gender:'male',
-            birthday:'1988-08-24 (35 years old)'            
+            id: nanoid(5),
+            img: 'https://winetravelawards.com/wp-content/uploads/2023/02/img_9290.jpg',
+            name: 'Nazeni Hovanisyan',
+            age: 41,
+            movies: 'AlaBalaNica,Spanvac Aghavnin,Anhayt Bajanord',
         },
         {
-            id:4,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg',
-            name:'Ralph Fiennes',
-            gender:'male',
-            birthday:'1962-12-22 (61 years old)'            
+            id: nanoid(5),
+            img: 'https://zarkfoundation.com/wp-content/uploads/2023/02/Luiza-Ghambaryan.jpg',
+            name: 'Luiza Ghambaryan',
+            age: 47,
+            movies: 'Anavart Trijq,Thank You Hayrik,Xavarman Ore',
         },
         {
-            id:5,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hJMbNSPJ2PCahsP3rNEU39C8GWU.jpg',
-            name:'Helena Carter',
-            gender:'Female',
-            birthday:'1966-05-26 (57 years old)'            
+            id: nanoid(5),
+            img: 'https://armlur.am/wp-content/uploads/2016/05/big_1330943736_4041870_ts1330943763.jpg',
+            name: 'Luiza Nersisyan',
+            age: 46,
+            movies: 'Siro Gorcakic,Qayl Dziov,Skotch&Whiskey',
         },
         {
-            id:6,
-            img:'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7tADZs4ILE93oJ5pAh6mKQFEq2m.jpg',
-            name:'Alan Rickman',
-            gender:'male',
-            birthday:'2016-01-14 (69 years old)'            
+            id: nanoid(5),
+            img: 'https://www.kino-teatr.ru/acter/photo/6/0/481306/938542.jpg',
+            name: 'Samvel Tadevosyan',
+            age: 30,
+            movies: 'Kyanq u kriv,Bravo Virtuoz,Soghomoni Ergery',
         },
-       
     ])
 
-return(
-    <div className="Actors">
-        
-        {
-            actors.map(actor =>{
-                return(
-                    <div className='Actors__card' key={actor.id}>
-                        <div className="Actors__image">
-                        <img src={actor.img}/>
-                        </div>                      
-                        <div className="Actors__content">
-                        <h3>{actor.name}</h3>
-                        <p><b>{actor.gender}</b></p>
-                        <p><b>{actor.birthday}</b></p>
+    return (
+        <div className="ArmActors">
+            {
+                armActors.map(actor => {
+                    return (
+                        <div key={actor.id} className="ArmActors__Card">
+                            <div className="ArmActors__image">
+                                <img src={actor.img} />
+                            </div>
+                            <div className="ArmActors__content">
+                                <h2>{actor.name}</h2>
+                                <p>Age: {actor.age}</p>
+                                <p>Movies: {actor.movies}</p>
+                                <ul>
+                                    <li><i className="bi bi-instagram"></i></li>
+                                    <li><i className="bi bi-facebook"></i></li>
+                                    <li><i className="bi bi-twitter"></i></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="Actors__icons">
-                            <a><i class="bi bi-facebook"></i></a>
-                            <a><i class="bi bi-instagram"></i></a>
-                            <a><i class="bi bi-twitter"></i></a>
-                        </div>
-                       
-                    </div>
-                )
-            })
-        }
-    </div>
-)
-
-}
+                    )
+                })
+            }
+        </div>
+    )
+}  

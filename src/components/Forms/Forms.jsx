@@ -3,68 +3,34 @@ import './Forms.scss'
 import { Formik, Field, Form } from 'formik';
 import { nanoid } from 'nanoid'
 import { useState } from 'react';
-const initialValues = {
-  title: '',
-  price: '',
-  category: '',
-  expiration: ''
-}
+
 export default function Forms() {
-  const [products, setProducts] = useState([
-    {
-      id: nanoid(6),
-      title: 'Wine',
-      price: 1200,
-      category: 'Alcohol',
-      expiration: '2024-01-28'
-    },
-    {
-      id: nanoid(6),
-      title: 'Milk',
-      price: 1200,
-      category: 'Alcohol',
-      expiration: '2024-01-28'
+  const [messages, setMessages] = useState([]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const {username,email,subject,textmessage} = e.target;
+    const message = {
+      id:nanoid(4),
+      user:username.value,
+      email:email.value,
+      subject:subject.value,
+      textmessage:textmessage.value
     }
-  ]);
-  const handleSubmit = (values, { resetForm }) => {
-    const expirationDate = new Date(values.expiration);
-    expirationDate.setDate(expirationDate.getDate() + 5);
-    const product = {
-      id: nanoid(6),
-      ...values,
-      expiration: expirationDate.toISOString().split('T')[0]
+    setMessages([...messages,message]);
+    e.reset();
     }
-    setProducts([...products, product])
-    resetForm();
-  }
   return (
     <div className='Forms'>
-      <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-        <Form className='Forms__Form'>
-          <Field type="text" name="title" placeholder="enter product title" />
-          <Field type="number" name="price" placeholder="enter price" />
-          <Field as="select" name="category">
-            <option value="Fruits">Fruits</option>
-            <option value="Meat">Meat</option>
-            <option value="Alcohol">Alcohol</option>
-          </Field>
-          <Field type="date" name="expiration" />
-          <Field className="submit" type="submit" name="submit" />
-        </Form>
-      </Formik>
-      <div className="Forms__Products">
-      {products.map(product =>{
-        return(
-          <div className="Forms__content" key={product.id}>
-            <h2>{product.title}</h2>
-            <p>{product.price}</p>
-            <p>{product.category}</p>
-            <p>{product.expiration}</p>
-          </div>
-        )
-      }) }       
-      </div>
+      <h2>Contact Us</h2>
+      <form className='Forms__Form' onSubmit={handleSubmit} >
+        <input type="text" name="username" placeholder='enter your name' required />
+        <input type="email" name="email" placeholder='enter your @mail' required />
+        <input type="text" name="subject" placeholder='subject' required />
+        <textarea name="textmessage" id="" cols="30" rows="10" placeholder='TYPE YOUR MESSAGE HERE' required ></textarea>
+        <button>Send</button>
+      </form>
     </div>
+
   )
-  
 }
+
