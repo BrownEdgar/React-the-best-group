@@ -1,7 +1,64 @@
 #root {
   margin: 0 auto;
 }
-.App{
+
+.App {
   // max-width: 1280px;
   margin: 0 auto;
+
+
+
+  .slick-slider {
+    width: 90%;
+    margin: 0 auto;
+
+    .animal {
+      height: 600px;
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 60% 55% 0 0;
+        background-color: rgba(0, 0, 0, 0.634);
+        border-radius: 0 10px 0 0;
+      }
+
+      &__content {
+        width: 40%;
+        position: absolute;
+        bottom: 10px;
+        left: 40px;
+        vertical-align: top;
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 40px;
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .slick-dots {
+      li {
+        button {
+          &::before {
+            color: greenyellow;
+          }
+        }
+      }
+    }
+  }
 }

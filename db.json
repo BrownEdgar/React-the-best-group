@@ -1,0 +1,40 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "lion",
+      "img": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "Lions have strong, compact bodies and powerful forelegs, teeth and jaws for pulling down and killing prey. Their coats are yellow-gold, and adult males have shaggy manes that range in color from blond to reddish-brown to black."
+    },
+    {
+      "id": 2,
+      "name": "eagle",
+      "img": "https://images.unsplash.com/photo-1567996293198-c7bc7c5d5ff7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "Eagles are generally larger and more powerful than hawks and may resemble a vulture in build and flight characteristics, but they have a fully feathered (often crested) head and strong feet equipped with great curved talons."
+    },
+    {
+      "id": 3,
+      "name": "tiger",
+      "img": "https://images.unsplash.com/photo-1582481960493-26179ea458e0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "Tigers have reddish-orange coats with prominent black stripes, white bellies and white spots on their ears. Like a human fingerprint, no two tigers have the exact same markings."
+    },
+    {
+      "id": 4,
+      "name": "cheetah",
+      "img": "https://images.unsplash.com/photo-1569600428323-7fd18782b483?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "The cheetah is a lightly built, spotted cat characterised by a small rounded head, a short snout, black tear-like facial streaks, a deep chest, long thin legs and a long tail.Its slender, canine-like form is highly adapted for speed, and contrasts sharply with the robust build of the genus Panthera."
+    },
+    {
+      "id": 5,
+      "name": "snow leopard",
+      "img": "https://images.unsplash.com/photo-1604608684575-0478ddb56d48?q=80&w=2866&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "Snow leopards have spotted white-greyish fur that keeps them well insulated in cold weather – it can be 5cm long on their back and sides and almost 12cm long on their belly. A snow leopard's tail can reach up to 80-105cm long, which is thought to help with balance, as well as wrap around its body for added warmth."
+    },
+    {
+      "id": 6,
+      "name": "jaguar",
+      "img": "https://images.unsplash.com/photo-1542296803-f4937a45e46b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "A symbol of the enigmatic power of the Amazon, the jaguar is the largest cat in the Americas. Jaguars have unusually large, round heads, short legs and a stunning coat dotted with dark rosettes and spots. They often live near water and are good swimmers."
+    }
+  ]
+}
