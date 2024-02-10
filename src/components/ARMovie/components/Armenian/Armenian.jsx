@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArmenianActors, ArmenianSeries, Slider } from '../../pages'
+import { ArmenianActors, ArmenianSeries, PictureSlider } from '../../pages'
 import './Armenian.scss'
 export default function Armenian() {
   const [images] = useState([
@@ -15,7 +15,7 @@ export default function Armenian() {
 
   return (
     <div className='Armenian'>
-      <Slider images={images} />
+      <PictureSlider images={images} />
       <ArmenianSeries />
       <ArmenianActors />
     </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigation, Slider, ComicsActors } from '../../pages'
+import { Navigation, ComicsActors, PictureSlider } from '../../pages'
 export default function Comics() {
   const [images] = useState([
     'https://4kwallpapers.com/images/wallpapers/avengers-endgame-marvel-superheroes-marvel-comics-5k-2560x1440-942.jpg',
@@ -16,7 +16,7 @@ export default function Comics() {
   return (
     <div className='Comics'>
       <Navigation />
-      <Slider images={images} />
+      <PictureSlider images={images} />
       <ComicsActors />
     </div>
   )

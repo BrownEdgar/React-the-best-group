@@ -1,0 +1,24 @@
+.PictureSlider {
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+  .slick-slider {
+    width: 100%;
+    
+    .slick-prev{
+    }
+
+    .item {
+      height: 600px;
+
+      img {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+}

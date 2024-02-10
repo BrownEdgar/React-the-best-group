@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Slider, HomeMovies, HomeActors } from '../../pages'
+import { PictureSlider, HomeMovies, HomeActors } from '../../pages'
 import { nanoid } from 'nanoid'
 
 export default function Home() {
@@ -7,7 +7,6 @@ export default function Home() {
     'https://images8.alphacoders.com/547/547394.jpg',
     'https://4kwallpapers.com/images/walls/thumbs_3t/13940.jpg',
     'https://images5.alphacoders.com/125/1257951.jpeg',
-    'https://images7.alphacoders.com/886/886515.jpg',
     'https://images8.alphacoders.com/131/1319119.png',
     'https://images3.alphacoders.com/131/1319517.jpeg',
     'https://images3.alphacoders.com/131/1310689.jpg',
@@ -102,7 +101,7 @@ export default function Home() {
 
   return (
     <div className="Home">
-      <Slider images={images} />
+      <PictureSlider images={images} />
       <HomeMovies movies={movies} />
       <HomeActors />
     </div>
