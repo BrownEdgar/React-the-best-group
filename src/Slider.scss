@@ -1,0 +1,107 @@
+$app-bg: linear-gradient(90deg, rgba(53, 103, 200, 1) 0%, rgba(42, 10, 10, 1) 100%);
+
+body {
+  background: rgb(7, 7, 7);
+}
+.App {
+  width: 1480px;
+  margin: 0 auto;
+  min-height: 560px;
+  padding: 1em;
+}
+
+.slick-slider {
+  height: 700px;
+  margin: 0 auto;
+
+  .Item {
+    height: 700px;
+    position: relative;
+    display: block;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    img {
+      filter: blur(3px) grayscale(100%);
+    }
+    &__content {
+      position: absolute;
+      transition: 0.3s;
+      bottom: 0;
+      right: 0;
+      padding: 1em;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      width: 600px;
+      h1 {
+        color: gold;
+        font-variant: small-caps;
+        font-size: 6em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-family: "Cabin Sketch", sans-serif;
+      }
+
+      p {
+        font-family: "Cabin Sketch", sans-serif;
+        line-height: 1.6;
+        font-style: italic;
+        font-weight: 100;
+      }
+    }
+    img {
+      position: absolute;
+      z-index: -1;
+      inset: 0 0 0 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .slick-prev {
+    left: -50px;
+    &:before {
+      color: #fff;
+      font-size: 40px;
+    }
+  }
+  .slick-next {
+    right: -50px;
+    &:before {
+      font-size: 40px;
+    }
+  }
+}
+
+section {
+  padding: 150px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: beige;
+  border-top: 1px solid #fff;
+}
+
+.slick-slide {
+  padding: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+
+  &:hover {
+    scale: 1.05;
+    rotate: 0.5deg;
+
+    img {
+      transition: 0.5s;
+      filter: blur(0px);
+    }
+  }
+}

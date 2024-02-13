@@ -1,0 +1,34 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "wolf",
+      "image": "https://cdn.pixabay.com/photo/2017/01/19/16/15/wolf-1992716_1280.jpg",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptates praesentium inventore quas asperiores accusantium cupiditate iure voluptate dolorem, obcaecati similique quod sit. Ullam rerum, quas inventore corrupti blanditiis ad, vel earum unde modi repellendus totam fugit aliquam natus asperiores!"
+    },
+    {
+      "id": 2,
+      "name": "Giraffe",
+      "image": "https://cdn.pixabay.com/photo/2017/04/11/21/34/giraffe-2222908_1280.jpg",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptates praesentium inventore quas asperiores accusantium cupiditate iure voluptate dolorem, obcaecati similique quod sit. Ullam rerum, quas inventore corrupti blanditiis ad, vel earum unde modi repellendus totam fugit aliquam natus asperiores!"
+    },
+    {
+      "id": 3,
+      "name": "lemure",
+      "image": "https://images.unsplash.com/photo-1583529933394-07d7eb205b24?q=80&w=3851&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptates praesentium inventore quas asperiores accusantium cupiditate iure voluptate dolorem, obcaecati similique quod sit. Ullam rerum, quas inventore corrupti blanditiis ad, vel earum unde modi repellendus totam fugit aliquam natus asperiores!"
+    },
+    {
+      "id": 4,
+      "name": "lopard",
+      "image": "https://cdn.pixabay.com/photo/2016/11/22/23/17/leopard-1851121_1280.jpg",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptates praesentium inventore quas asperiores accusantium cupiditate iure voluptate dolorem, obcaecati similique quod sit. Ullam rerum, quas inventore corrupti blanditiis ad, vel earum unde modi repellendus totam fugit aliquam natus asperiores!"
+    },
+    {
+      "id": 5,
+      "name": "Lion",
+      "image": "https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_1280.jpg",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio voluptates praesentium inventore quas asperiores accusantium cupiditate iure voluptate dolorem, obcaecati similique quod sit. Ullam rerum, quas inventore corrupti blanditiis ad, vel earum unde modi repellendus totam fugit aliquam natus asperiores!"
+    }
+  ]
+}

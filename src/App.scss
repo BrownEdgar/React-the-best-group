@@ -1,10 +1,5 @@
-$app-bg: linear-gradient(90deg, rgba(53, 103, 200, 1) 0%, rgba(42, 10, 10, 1) 100%);
+@import "./sass/colors";
 
 .App {
-  width: 1480px;
-  margin: 0 auto;
-  background: rgb(53, 103, 200);
-  background: $app-bg;
-  min-height: 560px;
-  padding: 1em;
+  background-color: $App-bg;
 }

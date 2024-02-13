@@ -1,0 +1,24 @@
+@import "../../sass/mixins";
+@import "../../sass/colors";
+
+.Photos {
+  @include mainGrid();
+  &__item {
+    padding: 1em;
+    border: 1px solid $article-border;
+    color: bisque;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    h2 {
+      font-weight: 300;
+      margin-top: 12px;
+    }
+    img {
+      user-select: none;
+      display: block;
+      height: 300px;
+      width: 100%;
+    }
+  }
+}

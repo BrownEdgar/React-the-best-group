@@ -1,13 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterSlice from '../features/counter/counterSlice'
-import postsSlice from '../features/posts/postsSlice'
-import todosSlice from '../features/todos/todosSlice'
+import animalsReducer from '../features/animals/animalsSlice'
+import photosReducer from '../features/photos/photosSlice'
+
 
 const store = configureStore({
   reducer: {
-    counter: counterSlice,
-    posts: postsSlice,
-    todos: todosSlice
+    animals: animalsReducer,
+    photos: photosReducer
   }
 })
 
