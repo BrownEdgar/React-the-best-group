@@ -1,24 +1,31 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import getPosts from "./getPostsAPI";
 
-
 export const getPostsAsync = createAsyncThunk('Posts/getAsync', getPosts)
 
 const initialState = {
   data: [],
+  page: 1,
+  perPage: 12,
   loading: false,
-  error: null
+  error: null,
+  total: 0
 }
 
 const PostSlice = createSlice({
   name: 'posts',
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    updatePage: (state, action) => {
+      state.page = action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getPostsAsync.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
+        state.total = action.payload.length
       })
       .addCase(getPostsAsync.rejected, (state, action) => {
         state.loading = false;
@@ -29,9 +36,16 @@ const PostSlice = createSlice({
       })
   },
   selectors: {
-    getAllPosts: (state) => state.data
+    getAllPosts: (state) => state.data,
+    getLimitedPosts: ({ data, page, perPage }) => {
+      const x = perPage * page;
+      return data.slice(x - perPage, x)
+    },
+    getTotal: ({ total }) => total,
+    getOptions: ({ page, perPage }) => ({ page, perPage })
   }
 })
 
-export const { getAllPosts } = PostSlice.selectors;
+export const { updatePage } = PostSlice.actions
+export const { getAllPosts, getLimitedPosts, getTotal, getOptions } = PostSlice.selectors;
 export default PostSlice.reducer;

@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  li {
+    background-color: transparent;
+    border: 2px solid royalblue;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: royalblue;
+      color: black;
+    }
+
+    &.selected {
+      background-color: royalblue;
+    }
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      font-weight: 700;
+      transition: 150ms;
+      cursor: pointer;
+    }
+  }
+}
