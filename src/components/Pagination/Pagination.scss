@@ -1,0 +1,29 @@
+.Pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0;
+    li {
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 10px;
+    
+        &:hover {
+          background-color: rgb(32, 32, 32);
+          color: gold;
+        }
+    
+        &.selected {
+          background-color: balck;
+        }
+    
+        a {
+          display: block;
+          padding: 10px 20px;
+          font-weight: 700;
+          transition: 150ms;
+          cursor: pointer;
+        }
+      }
+}

@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import React from 'react'
+import Posts from './components/Posts/Posts'
+import Pagination from './components/Pagination/Pagination'
 import './App.scss'
-import Users from './components/Users/Users'
 
-function App() {
+export default function App() {
   return (
-    <div className='App'>
-      <Users />
+    <div className="App">
+      <h1>Our Posts</h1>
+      <Posts />
+      <Pagination />
     </div>
   )
 }
 
-export default App

@@ -1,37 +1,49 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-export const getPostsAsync = createAsyncThunk("Posts/async", async () => {
-    const res = await axios('https://jsonplaceholder.typicode.com/posts')
-    return res.data;
-})
+import getPosts from "./getPostsAPI";
+export const getPostsAsync = createAsyncThunk('Posts/getAsync', getPosts)
 const initialState = {
-    data: [],
-    loading: false,
-    error: null
+  data: [],
+  page: 1,
+  perPage: 12,
+  loading: false,
+  error: null,
+  total: 0
 }
-const PostSlice = createSlice({
-    name: 'Posts',
-    initialState: initialState,
-    reducers: {
 
+const PostSlice = createSlice({
+  name: 'posts',
+  initialState: initialState,
+  reducers: {
+		updatePage:(state,action)=>{
+			state.page = action.payload
+		}
+	},
+  extraReducers: (builder) => {
+    builder
+      .addCase(getPostsAsync.fulfilled, (state, action) => {
+        state.loading = false;
+        state.data = action.payload;
+        state.total = action.payload.length
+      })
+      .addCase(getPostsAsync.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error;
+      })
+      .addCase(getPostsAsync.pending, (state) => {
+        state.loading = true;
+      })
+  },
+  selectors: {
+    getAllPosts: (state) => state.data,
+    getLimitedPosts: ({ data, page, perPage }) => {
+      const y = perPage * page;
+      return data.slice(y - perPage, y)
     },
-    extraReducers: (builder) => {
-        builder
-            .addCase(getPostsAsync.fulfilled, (state, action) => {
-                state.loading = false;
-                state.data = action.payload;
-            })
-            .addCase(getPostsAsync.rejected, (state, action) => {
-                state.loading = false;
-                state.error = action.error;
-            })
-            .addCase(getPostsAsync.pending, (state) => {
-                state.loading = true;
-            })
-    },
-    selectors:{
-        getAllPosts: (state) => state.data
-    }
+    getTotal: ({total}) => total,
+    getOptions: ({page,perPage}) => ({page,perPage})
+  }
 })
-export const {getAllPosts} = PostSlice.selectors;
+
+export const { getAllPosts, getLimitedPosts,getTotal,getOptions } = PostSlice.selectors;
 export default PostSlice.reducer;
+export const {updatePage} = PostSlice.actions;
