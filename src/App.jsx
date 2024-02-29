@@ -1,30 +1,41 @@
-import { useState } from 'react';
+import React, { useState } from 'react'
+import LANGUAGES from './i18n/locale'
+import Provider from './i18n/Provider';
+import Translate from './i18n/Translate';
+
 import './App.scss'
-import Posts from '@/Posts/Posts';
+
+export default function App() {
+  const [locale, setLocale] = useState(LANGUAGES.ENGLISH);
 
 
-function App() {
-  const [posts] = useState([
-    {
-      id: 1,
-      title: 'Pandas',
-      image: 'https://images.unsplash.com/photo-1593526492327-b071f3d5333e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum voluptatem sunt labore corporis sed? Libero, fuga incidunt. Officiis porro, quidem eius omnis recusandae ratione id laborum architecto animi obcaecati nemo!'
-    },
-    {
-      id: 2,
-      title: 'Mongoose',
-      image: 'https://images.unsplash.com/photo-1560572765-d75742ca1cf0?q=80&w=3872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum voluptatem sunt labore corporis sed? Libero, fuga incidunt. Officiis porro, quidem eius omnis recusandae ratione id laborum architecto animi obcaecati nemo!'
-    }
-  ])
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setLocale(value)
+  }
+
 
   return (
-    <div className='App'>
-      <h1 className='App__title'>Our posts</h1>
-      <Posts posts={posts} />
-    </div>
+    <Provider locale={locale}>
+      <div className='App'>
+        <select name="languages" id="languages" onChange={handleChange}>
+          <option value="en-us">en</option>
+          <option value="ru-ru">ru</option>
+          <option value="am-am">arm</option>
+        </select>
+        <h1>
+          <Translate id='title' value={
+            {
+              pathen: 'secret word for english',
+              patham: 'գաղտնաբառ բղդո5400',
+            }
+          } />
+        </h1>
+        <p>
+          <Translate id='description' />
+        </p>
+      </div>
+    </Provider>
+
   )
 }
-
-export default App
