@@ -1,0 +1,13 @@
+.App {
+  width: 900px;
+  margin: 50px auto;
+  background-color: purple;
+  padding: 2em;
+  .content {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: teal;
+    padding: 1em;
+  }
+}

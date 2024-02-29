@@ -1,32 +1,19 @@
-import { useEffect, useReducer } from 'react'
-import reducer, { initialStateValue } from './reducer'
-import { ADD_USER, DELETE_USER_BY_ID, GET_USERS } from './actionTypes'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 export default function Test() {
-  const [state, dispatch] = useReducer(reducer, initialStateValue)
+  const x = 5;
+  if (x > 1) {
+    const [count, setCount] = useState(0)
+  }
 
   useEffect(() => {
+    console.log('ok')
 
-    axios('https://jsonplaceholder.typicode.com/users')
-      .then(res => dispatch({ type: GET_USERS, payload: res.data }))
   }, [])
-
-  const deleteUser = () => {
-    dispatch({ type: DELETE_USER_BY_ID, payload: 6 })
-  }
-
-  const addUser = () => {
-    dispatch({ type: ADD_USER, payload: { user: "Vazgen" } })
-  }
 
   return (
     <div>
-      <pre>
-        {JSON.stringify(state, null, 1)}
-      </pre>
-      <button onClick={deleteUser}>delete user N 6</button>
-      <button onClick={addUser}>add user</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis consectetur neque eveniet officia, amet itaque voluptatem perspiciatis exercitationem iste nostrum praesentium eius deserunt, quaerat vero molestias ea labore ipsam illo impedit placeat? Expedita nobis quas fugit facere dolorem error eligendi aperiam, explicabo dolores praesentium placeat est earum unde blanditiis molestiae exercitationem laborum nihil velit ad. Eius saepe quasi et dignissimos illo illum eveniet, iste est modi temporibus qui, atque dolorum.s</p>
     </div>
   )
 }

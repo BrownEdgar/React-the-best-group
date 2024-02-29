@@ -26,3 +26,13 @@ a {
 ul {
   list-style: none;
 }
+
+pre {
+  white-space: pre-line;
+  background-color: #1d1d1d;
+  color: purple;
+  padding: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  border-radius: 10px;
+}
