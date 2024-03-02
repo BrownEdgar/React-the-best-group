@@ -1,0 +1,40 @@
+.Form {
+  form {
+    width: 500px;
+    padding: 1em;
+    margin: 30px auto;
+    & > div {
+      text-align: left;
+      margin-bottom: 12px;
+      &.buttons {
+        display: flex;
+        gap: 12px;
+      }
+      p.error {
+        color: #ff0404;
+        display: inline-block;
+        padding: 0px 4px;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+    }
+    input {
+      margin-bottom: 2px;
+      width: 100%;
+      font-size: 20px;
+      padding: 0.6rem 1rem;
+      border: 1px solid grey;
+      &[type="submit"] {
+        background-color: green;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      &[type="button"] {
+        background-color: royalblue;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+}
